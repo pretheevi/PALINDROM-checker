@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrom</title>
+    <style>
+        #input{
+            background-color: aqua;
+        }
+        button{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Palindrom checker</h1>
+    <h3>This palindrom is to find if a word has same letter in beginning and ending</h3>
+    <input type="text" placeholder="type somthing" id="input"/>
+    <button onclick="check()">Click</button>
+    <p id="value"></p>
+    <script>
+        const input =document.getElementById("input");
+        const para = document.getElementById("para");
+
+        function reverse(str){
+            return str.split("").reverse().join("");
+        }
+
+        function check(){
+            let display;
+            const Value = input.value;
+            const reversed = reverse(Value);
+            
+            if(Value === reversed){
+                display = document.getElementById("value").innerHTML = "P A L I N D R O M E";
+            }else{
+                display = document.getElementById("value").innerHTML = "Not today";
+            }
+            }
+
+    </script>
+</body>
+</html>
